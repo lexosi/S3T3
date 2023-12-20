@@ -3,12 +3,64 @@
  */
 package s3t3;
 
-public class App {
-    public String getGreeting() {
-        return "Hello!";
-    }
+import s3t3.GardenShop.application.port.out.GardenShopRepository;
+import s3t3.GardenShop.application.service.CreateGardenShopService;
+import s3t3.GardenShop.application.utilities.Input_sc;
+import s3t3.GardenShop.domain.GardenShop;
+import s3t3.GardenShop.infrastructure.adapter.repository.TxtGardenShopRepository;
+import s3t3.GardenShop.infrastructure.adapter.repository.TxtTicketRepository;
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+public class App {
+	GardenShop gardenShop;
+	CreateGardenShopService service;
+	GardenShopRepository repository;
+	TxtGardenShopRepository txtGardenRepo;
+	TxtTicketRepository txtTicketRepo;
+	
+	public App() {
+		//gardenShop = new GardenShop(name)
+		service = new CreateGardenShopService(repository);
+		txtGardenRepo = new TxtGardenShopRepository();
+		txtTicketRepo = new TxtTicketRepository();
+	}
+	
+	
+	public void start() {
+		menuStart();
+	}
+	
+	public void menuStart() {
+		boolean quit = false;
+		do {
+			switch(showMenu()) {
+			case 1 -> service.createGardenShop(name);
+			case 2 -> TxtGardenShopRepository.;
+			case 3 -> ;
+			case 4 -> ;
+			case 5 -> ;
+			case 6 -> ;
+			case 7 -> ;
+			case 8 -> ;
+			case 9 -> ;
+			}
+		} while(!quit);
+	}
+		
+	//menu
+	
+	public static int showMenu() {
+		int option = Input_sc.enterInt("GARDEN SHOP APP MENU\n"
+				+ "Choose one of the following options (enter its number)\n"
+				+ "1. Create new Garden Shop\n"
+				+ "2. Add Tree, Flower or Decoration to the shop's stock\n"
+				+ "3. Show the stock of all products\n"
+				+ "4. Remove Tree, Flower or Decoration from the shop's stock\n"
+				+ "5. Show stock quantities\n"
+				+ "6. Show total value of the Garden shop\n"
+				+ "7. Create sale's tickets with multiple objects\n"
+				+ "8. Show old sale tickets\n"
+				+ "9. Show total amount made from sales");
+		return option;
+	}
+	
 }
