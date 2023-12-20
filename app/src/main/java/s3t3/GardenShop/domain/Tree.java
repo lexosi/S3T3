@@ -1,11 +1,13 @@
 package s3t3.GardenShop.domain;
 
+import s3t3.GardenShop.domain.enums.ProductType;
+
 public class Tree extends Product {
 	
 	private double height;
 	
-	public Tree(double price, String name, double height) {
-		super(price, name);
+	public Tree(ProductType prodType, double price, String name, double height) {
+		super(prodType, price, name);
 		this.height = height;
 	}
 	
