@@ -2,14 +2,20 @@ package s3t3.GardenShop.domain;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+import s3t3.GardenShop.domain.enums.ProductType;
+
+
+
 abstract class Product {
 	
 	private int id; 
+	private ProductType prodType; // add prod type
 	private double price;
 	private String name;
 	private static AtomicInteger ai = new AtomicInteger(0);
 	
-	public Product(double price, String name) {
+	public Product(ProductType prodType, double price, String name) {
+		this.prodType = prodType;
 		this.price = price;
 		this.name = name;
 		this.id = ai.incrementAndGet();
@@ -18,6 +24,10 @@ abstract class Product {
 	//getters & setters
 	public int getId() {
 		return id;
+	}
+	
+	public ProductType getProdType() {
+		return this.prodType;
 	}
 	
 	public double getPrice() {
