@@ -2,9 +2,9 @@ package s3t3.GardenShop.domain.enums;
 
 public enum ProductType {
     
-	T("Tree"),
-	F("Flower"),
-	D("Decoration");
+	TREE("T"),
+	FLOWER("F"),
+	DECORATION("D");
 	
 	private final String productType;
 	
@@ -14,5 +14,9 @@ public enum ProductType {
 	
 	public String getProductType() {
 		return this.productType;
+	}
+	
+	public String toString() {
+		return this.productType.toLowerCase();
 	}
 }
