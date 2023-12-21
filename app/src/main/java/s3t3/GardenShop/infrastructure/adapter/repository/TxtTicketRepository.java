@@ -11,9 +11,8 @@ import s3t3.GardenShop.domain.Ticket;
 
 public class TxtTicketRepository implements TicketRepository {
 
-	static String dataPath = System.getProperty("user.dir") + "/data";
-	private static String ticketFile = dataPath + "tickets.txt";
 
+main
 	@Override
 	public void save(Ticket ticket) {
 		File newTicket = new File(ticketFile);

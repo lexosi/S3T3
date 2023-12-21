@@ -19,4 +19,10 @@ public class Tree extends Product {
 		this.height = height;
 	}
 
+	@Override
+	public String toString() {
+		return (super.toString() +
+				"\nHeight: " + height);
+	}
+
 }
