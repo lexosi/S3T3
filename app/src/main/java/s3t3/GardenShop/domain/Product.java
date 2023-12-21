@@ -45,6 +45,14 @@ abstract class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	@Override
+	public String toString() {
+		return ("ID: " + id +
+				"\nProduct Type: " + ProdType +
+				"\nName: " + name +
+				"\nPrice" + price);
+	}
 	
 	
 	
