@@ -7,7 +7,7 @@ import s3t3.GardenShop.domain.GardenShop;
 
 public class CreateGardenShopService implements CreateGardenShop {
 
-	private final GardenShopRepository repository;
+private final GardenShopRepository repository;
 	
 	public CreateGardenShopService(GardenShopRepository repository) {
 		this.repository = repository;
@@ -27,5 +27,6 @@ public class CreateGardenShopService implements CreateGardenShop {
 		}
 		
 	}
-
+	
+	
 }
