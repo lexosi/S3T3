@@ -11,12 +11,8 @@ import s3t3.GardenShop.domain.Ticket;
 
 public class TxtTicketRepository implements TicketRepository {
 
-	private static String ticketFile = dataPath + "tickets.txt";
-	
-	public TxtTicketRepository() {
-		// Add constructor logic here if needed
-	}
-	
+
+main
 	@Override
 	public void save(Ticket ticket) {
 		File newTicket = new File(ticketFile);
@@ -61,7 +57,6 @@ public class TxtTicketRepository implements TicketRepository {
 
 
 	@Override
-	public void delete(Ticket ticket) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void delete(Ticket ticket) {}
+
+}

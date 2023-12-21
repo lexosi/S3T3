@@ -7,6 +7,4 @@ public interface CreateGardenShop {
 
 	GardenShop createGardenShop(String name);
 	
-//	String shopName = Input_sc.enterStr("Enter the name of the Garden Shop:");
-//	GardenShop garden = new GardenShop(shopName);
 }
