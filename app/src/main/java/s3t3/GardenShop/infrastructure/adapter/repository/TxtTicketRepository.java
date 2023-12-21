@@ -13,6 +13,10 @@ public class TxtTicketRepository implements TicketRepository {
 
 	private static String ticketFile = "tickets.txt";
 	
+	public TxtTicketRepository() {
+		// Add constructor logic here if needed
+	}
+	
 	@Override
 	public void save(Ticket ticket) {
 		File newTicket = new File(ticketFile);
