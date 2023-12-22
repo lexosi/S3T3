@@ -26,7 +26,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 's3t3.App'
+    mainClass = 's3t3.Main'
 }
 
 sourceSets {
