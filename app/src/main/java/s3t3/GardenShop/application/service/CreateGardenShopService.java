@@ -16,7 +16,7 @@ private final GardenShopRepository repository;
 	@Override
 	public GardenShop createGardenShop(String name) {
 		GardenShop gardenShop;
-		if(GardenShop.getName() == null || !GardenShop.getName().equalsIgnoreCase(name)) {
+		if(gardenShop.getName() == null || !gardenShop.getName().equalsIgnoreCase(name)) {
 			String shopName = Input_sc.enterStr("Enter the name of the Garden Shop:");
 			gardenShop = new GardenShop(shopName);
 			repository.save(gardenShop);
