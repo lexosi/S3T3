@@ -28,6 +28,23 @@ static Scanner sc = new Scanner(System.in);
 		return str;
 	}
 	
+	public static byte enterByte(String msgXuser) {
+		byte bt = 0;
+		boolean isByte = false;
+		
+		do {
+			try {
+				System.out.println(msg);
+				bt = sc.nextByte();
+				isByte = true;
+				return valor;
+			} catch(InputMismatchException e) {
+				System.err.println("Format error");
+			}
+			sc.nextLine();
+		} while(!isByte);
+		return bt;
+	}
 	
 	public static int enterInt(String msgXuser) {	
 		int num = 0;
@@ -62,5 +79,6 @@ static Scanner sc = new Scanner(System.in);
 		} while(!isDouble);
 		return dbl;
 	}
+	
 	
 }

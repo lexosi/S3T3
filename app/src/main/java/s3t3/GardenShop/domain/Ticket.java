@@ -63,7 +63,7 @@ public class Ticket {
 	
 	@Override
 	public String toString() {
-		return  GardenShop.getName() + "\n"
+		return  gardenShop.getName() + "\n"
 				+ "Sale num: " + ticketID + "\n"
 				+ "Quantity		Description\n"
 				+ this.ticketLines + "\n"
